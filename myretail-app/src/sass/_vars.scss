@@ -1,0 +1,40 @@
+//------------------------------------//
+//  $VARIABLES
+//------------------------------------//
+
+// Base measurements
+$base-font-size: 14px;
+$base-line-height: 20px;
+$base-font-size--mobile: $base-font-size;
+
+// Calculated measurements
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$base-spacing-unit: rem($line-height-ratio);
+$half-spacing-unit: $base-spacing-unit / 2;
+
+// Layout
+$site-min-width: 320px;
+$site-width: 1024px;
+$site-width-large: 1360px;
+
+// Breakpoints
+$media-breakpoints: (hand: 480px, lap: 768px, desk: 1024px, wall: 1200px);
+
+// phone 480
+// tablet 768
+// laptop 1024
+// desktop 1200
+
+// Colors
+$black: #000000;
+$gray-dark: #666666;
+$gray: #CCCCCC;
+$gray-light: #f6f5f5;
+$white: #ffffff;
+
+$primary: #CC0000;
+$secondary: $black;
+
+// $font-body: $font-montserrat;
+// $font-head: $font-montserrat;
