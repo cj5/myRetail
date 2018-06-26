@@ -19,12 +19,7 @@ $site-width: 1024px;
 $site-width-large: 1360px;
 
 // Breakpoints
-$media-breakpoints: (hand: 480px, lap: 768px, desk: 1024px, wall: 1200px);
-
-// phone 480
-// tablet 768
-// laptop 1024
-// desktop 1200
+$media-breakpoints: (hand: 480px, tablet: 768px, lap: 1024px, desk: 1360px);
 
 // Colors
 $black: #000000;
@@ -36,5 +31,5 @@ $white: #ffffff;
 $primary: #CC0000;
 $secondary: $black;
 
-// $font-body: $font-montserrat;
-// $font-head: $font-montserrat;
+$font-body: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+$font-header: 'Helvetica Neue','Helvetica','Arial',sans-serif;

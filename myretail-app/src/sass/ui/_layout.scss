@@ -1,0 +1,17 @@
+//------------------------------------//
+//  $LAYOUT
+//------------------------------------//
+
+html {
+}
+
+body {
+  min-width: $site-min-width;
+}
+
+.container {
+  max-width: $site-width;
+  margin: 0 auto;
+  //@include media($from: lap) {
+  //}
+}

@@ -1,0 +1,33 @@
+//------------------------------------//
+//  $FUNCTIONS
+//------------------------------------//
+
+
+// applies the function to each argument in the given list.
+@function map($func, $list, $args...) {
+  $new-list: ();
+  @each $item in $list {
+    $new-list: append($new-list, call($func, $item, $args...));
+  }
+  @return $new-list;
+}
+
+// px2em
+@function px2em($px) {
+  @if unitless($px) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+    @return px2em($px * 1px);
+  } @else if unit($px) == em {
+    @return $px;
+  }
+  @return ($px / 16px) * 1em;
+}
+
+// get-breakpoint-width
+@function get-breakpoint-width($name, $breakpoints: $media-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  } @else {
+    @error "Breakpoint #{$name} wasn't found in $media-breakpoints.";
+  }
+}
