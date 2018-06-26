@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import '../css/main.css';
 
+import ProductItem from "./components/ProductItem"
+import Loading from "./components/Loading"
+
 class App extends Component {
+  state = {
+    product: null,
+  }
+
+  async componentDidMount() {
+    let product = await this.props.apiClient.loadProduct()
+    this.setState({product})
+  }
+
   render() {
+    let {product} = this.state
     return (
-      <div>
-        <header>
-          <h1 className="h1">myRetail Initial Beginnings 🎉</h1>
-        </header>
-      </div>
+      // data={product} || {...product}
+      product != null ? <ProductItem data={product} /> : <Loading />
     );
   }
 }
