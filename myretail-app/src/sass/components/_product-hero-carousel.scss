@@ -1,0 +1,10 @@
+//------------------------------------//
+//  $PRODUCT HERO CAROUSEL
+//------------------------------------//
+
+.carousel-wrapper {
+  max-width: 320px;
+  @include media($from: hand) {
+    max-width: 460px;
+  }
+}

@@ -1,0 +1,16 @@
+//------------------------------------//
+//  $CAROUSEL
+//------------------------------------//
+
+.carousel-wrapper {
+  .carousel.carousel-slider .control-arrow {
+    color: red;
+    &:before {
+      color: red;
+    }
+  }
+
+  .thumbs {
+    overflow-y: auto;
+  }
+}

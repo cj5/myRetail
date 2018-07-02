@@ -1,0 +1,12 @@
+//------------------------------------//
+//  $PRODUCT ITEM
+//------------------------------------//
+
+.product-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  @include media($from: tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,61 @@
+//------------------------------------//
+//  $PRODUCT REVIEWS
+//------------------------------------//
+
+.product-reviews {
+  padding: 20px;
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: $black;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    span {
+      margin-left: 10px;
+      font-weight: 600;
+    }
+    .stars {
+      vertical-align: top;
+      margin-bottom: 10px;
+    }
+  }
+
+  .review-wrapper {
+    background: $gray-light;
+    padding: 0 15px 15px 15px;
+
+    .header {
+      border-bottom: 1px solid $gray;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 15px;
+      .title {
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .description {
+        color: $gray-dark;
+        font-size: 0.7rem;
+        margin: 0;
+      }
+    }
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+      p {
+        color: $gray-dark;
+        font-size: 0.9rem;
+      }
+      .signed {
+        font-size: 0.7rem;
+        a {
+          text-decoration: none;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
