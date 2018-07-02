@@ -8,12 +8,12 @@ class App extends Component {
   state = {
     product: null,
   }
-
+  
   async componentDidMount() {
-    let product = await this.props.apiClient.loadProduct()
+    let product = await this.props.apiClient.loadProduct() 
     this.setState({product})
   }
-
+  
   render() {
     let {product} = this.state
     return (
