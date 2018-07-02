@@ -2,6 +2,76 @@
 //  $BUTTONS
 //------------------------------------//
 
-.btn {
+%btn {
+  display: inline-block;
+  margin: 0;
+  padding: .4em 1.6em;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  &,
+  &:hover,
+  &:focus { text-decoration: none; }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    &,
+    &:hover,
+    &:focus {
+      color: $gray;
+      background-color: $gray-light !important;
+      box-shadow: none;
+    }
+  }
   
+  @include media($from: desk) {
+    font-size: 1.125rem;
+  }
+}
+
+.btn--primary {
+  @extend %btn;
+  background-color: $black;
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $black;
+    background-color: $white;
+    box-shadow: inset 0 0 0 2px rgba($black, 1);
+  }
+}
+
+.btn--secondary {
+  @extend %btn;
+  background-color: $primary;
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: darken($primary, 8%);
+  }
+}
+
+.btn--tertiary {
+  @extend %btn;
+  background-color: $gray-light;
+  color: $gray-dark;
+  padding: .2em 3em;
+  font-size: .7rem;
+  line-height: 1.6;
+  &:hover,
+  &:focus {
+    color: $black;
+    background-color: darken($gray-light, 5%);
+  }
 }

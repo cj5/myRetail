@@ -5,12 +5,11 @@
 // Base measurements
 $base-font-size: 14px;
 $base-line-height: 20px;
-$base-font-size--mobile: $base-font-size;
 
 // Calculated measurements
 $line-height-ratio: $base-line-height / $base-font-size;
 
-$base-spacing-unit: rem($line-height-ratio);
+$base-spacing-unit: $line-height-ratio;
 $half-spacing-unit: $base-spacing-unit / 2;
 
 // Layout
@@ -28,7 +27,7 @@ $gray: #CCCCCC;
 $gray-light: #f6f5f5;
 $white: #ffffff;
 
-$primary: #CC0000;
+$primary:#CC0000;
 $secondary: $black;
 
 $font-body: 'Helvetica Neue','Helvetica','Arial',sans-serif;

@@ -2,6 +2,22 @@
 //  $MIXINS
 //------------------------------------//
 
+
+//---------------------
+// Vertical and Horizontal Padding
+@mixin padding-horizontal($amount) {
+  padding-left: $amount + rem;
+  padding-right: $amount + rem;
+}
+
+@mixin padding-vertical($amount) {
+  padding-top: $amount + rem;
+  padding-bottom: $amount + rem;
+}
+
+
+//---------------------
+// Media Queries
 @mixin media($feature:false, $from:false, $upto:false, $type:screen) {
   $min-width: 0;
   $max-width: 0;
