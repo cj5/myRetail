@@ -7,6 +7,7 @@ export default class ProductHeroCarousel extends Component {
   render(props) {
     return (
       <div className="product-hero-carousel">
+      {/* Test if has title/image */}
         <h2 className="h1">{this.props.title}</h2>
         <div className="carousel-wrapper">
           {this.props.images.length > 0 ?
